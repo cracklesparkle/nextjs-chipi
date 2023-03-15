@@ -189,18 +189,36 @@ export default function PostCard({ id, content, created_at, photos, profiles: au
           </ClickOutHandler>
         </div>
       </div>
-      <div>
-        <p className="my-3 text-l">{content}</p>
-        {photos?.length > 0 && (
-          <div className="flex gap-4">
-            {photos.map(photo => (
-              <div key={photo} className="">
-                <img src={photo} className="rounded-md" alt="" />
-              </div>
-            ))}
+      <div className="flex flex-col bg-slate-200 rounded-md mt-2 mb-2">
+        <div className="flex flex-row flex-nowrap mt-2 ">
+          <div className="flex flex-col w-1/4 text-center">
+            <div className="bg-slate-400 w-16 h-24 m-2 rounded-md"></div>
+            <p>Автор</p>
+            <p>2022</p>
           </div>
-        )}
+
+          <div className="flex flex-col w-2/3">
+            <p className="font-medium">Рецензия на книгу</p>
+            <p className="my-auto text-l text-justify mt-0">{content}</p>
+            {photos?.length > 0 && (
+              <div className="flex gap-4">
+                {photos.map(photo => (
+                  <div key={photo} className="">
+                    <img src={photo} className="rounded-md" alt="" />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="flex flex-col mb-2">
+        <Link href={`/book`} className="bg-slate-300 text-slate-700 px-3 py-1 w-56 my-auto rounded-md mt-2 mb-2 w-10/12 mx-auto text-center">Перейти к книге</Link>
+        
+        <button className="bg-slate-300 text-slate-700 px-3 py-1 w-56 my-auto rounded-md mb-2 w-10/12 mx-auto">Перейти к автору</button>
+        </div>
       </div>
+
       <div className="mt-5 flex gap-8 justify-around text-blue-400">
         <button className="flex gap-2 items-center">
           <svg className="w-6 h-6" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

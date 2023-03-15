@@ -11,6 +11,7 @@ import Cover from "../components/Cover";
 import ProfileTabs from "../components/ProfileTabs";
 import ProfileContent from "../components/ProfileContent";
 import { UserContextProvider } from "../contexts/UserContext";
+import TopNavigationCard from "@/components/TopNavigationCard";
 
 export default function ProfilePage() {
   const [profile, setProfile] = useState(null);
@@ -67,6 +68,9 @@ export default function ProfilePage() {
     <Layout>
       <UserContextProvider>
         <Card noPadding={true}>
+        <div className="z-10 bg-white md:static w-full top-0 visible xl:hidden 2xl:hidden lg:hidden">
+          <TopNavigationCard title="Профиль"/>
+        </div>
           <div className="relative overflow-hidden rounded-md">
             {/* <Cover url={profile?.cover} editable={isMyUser} onChange={fetchUser} /> */}
             <div className="z-20 mx-auto flex justify-center mt-8">
@@ -108,8 +112,8 @@ export default function ProfilePage() {
                 </div>
 
               </div>
-              <div className="flex mx-auto justify-between mt-2 mb-2 justify-items-center">
-                <button className="bg-socialBlue text-white px-3 py-1 w-56 my-auto rounded-md">Подписаться</button>
+              <div className="flex mx-auto justify-between mt-2 mb-2 justify-items-center font-medium">
+                <button className="bg-slate-300 text-slate-700 px-3 py-1 w-56 my-auto rounded-md">Подписаться</button>
                 <button
                   onClick={() => {
                     setEditMode(true);

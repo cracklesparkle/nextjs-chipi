@@ -7,6 +7,8 @@ import mainLogo from '../images/logo.svg'
 import Link from "next/link";
 import Avatar from "../components/Avatar";
 
+import { motion } from "framer-motion";
+
 export default function ProfileContent({ activeTab, userId }) {
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);
@@ -42,7 +44,8 @@ export default function ProfileContent({ activeTab, userId }) {
   }
 
   return (
-    <div>
+    <motion.div initial={{opacity: 0 }}
+    animate={{ opacity: 1 }}> 
       {activeTab === 'posts' && (
         <div>
           {posts?.length > 0 && posts.map(post => (
@@ -228,6 +231,6 @@ export default function ProfileContent({ activeTab, userId }) {
           </Card>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

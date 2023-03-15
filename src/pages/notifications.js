@@ -14,9 +14,9 @@ export default function NotificationsPage() {
               <Avatar />
             </Link>
             <div>
-              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}>John Doe</Link>
-              liked
-              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}>your photo</Link>
+              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}></Link>
+              
+              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}></Link>
             </div>
           </div>
           <div className="flex gap-2 items-center border-b border-b-gray-100 p-4">
@@ -24,9 +24,9 @@ export default function NotificationsPage() {
               <Avatar />
             </Link>
             <div>
-              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}>John Doe</Link>
-              liked
-              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}>your photo</Link>
+              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}></Link>
+              
+              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}></Link>
             </div>
           </div>
           <div className="flex gap-2 items-center border-b border-b-gray-100 p-4">
@@ -34,9 +34,9 @@ export default function NotificationsPage() {
               <Avatar />
             </Link>
             <div>
-              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}>John Doe</Link>
-              liked
-              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}>your photo</Link>
+              <Link href={'/profile'} className={'font-semibold mr-1 hover:underline'}></Link>
+              
+              <Link href={''} className={'ml-1 text-socialBlue hover:underline'}></Link>
             </div>
           </div>
         </div>

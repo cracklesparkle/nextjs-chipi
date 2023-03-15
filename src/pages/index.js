@@ -1,16 +1,17 @@
 import Layout from "../components/Layout";
 import PostFormCard from "../components/PostFormCard";
 import PostCard from "../components/PostCard";
-import {useSession, useSupabaseClient} from "@supabase/auth-helpers-react";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import LoginPage from "./login";
-import {useEffect, useState} from "react";
-import {UserContext} from "../contexts/UserContext";
+import { useEffect, useState } from "react";
+import { UserContext } from "../contexts/UserContext";
+import TopNavigationCard from "@/components/TopNavigationCard";
 
 export default function Home() {
   const supabase = useSupabaseClient();
   const session = useSession();
-  const [posts,setPosts] = useState([]);
-  const [profile,setProfile] = useState(null);
+  const [posts, setPosts] = useState([]);
+  const [profile, setProfile] = useState(null);
 
   useEffect(() => {
     fetchPosts();
@@ -34,7 +35,7 @@ export default function Home() {
     supabase.from('posts')
       .select('id, content, created_at, photos, profiles(id, avatar, name)')
       .is('parent', null)
-      .order('created_at', {ascending: false})
+      .order('created_at', { ascending: false })
       .then(result => {
         console.log('posts', result);
         setPosts(result.data);
@@ -45,9 +46,14 @@ export default function Home() {
     return <LoginPage />
   }
 
+  const tabs = ["Рецензии", "Для Вас"]
+
   return (
     <Layout>
-      <UserContext.Provider value={{profile}}>
+      <UserContext.Provider value={{ profile }}>
+        <div className="z-10 bg-white md:static w-full top-0 visible xl:hidden 2xl:hidden lg:hidden">
+          <TopNavigationCard title="Главная" tabs={tabs} tab="/"/>
+        </div>
         {/* <PostFormCard onPost={fetchPosts} /> */}
         {posts?.length > 0 && posts.map(post => (
           <PostCard key={post.id} {...post} />

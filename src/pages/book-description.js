@@ -7,10 +7,10 @@ import { UserContextProvider } from "../contexts/UserContext";
 import Card from "../components/Card";
 import ProfileTabs from "../components/ProfileTabs";
 import ProfileContent from "../components/ProfileContent";
-import TopNavigationCard from "@/components/TopNavigationCard";
+
 import Link from "next/link";
 
-export default function FyPage() {
+export default function BookDescription() {
     const [profile, setProfile] = useState(null);
     const [editMode, setEditMode] = useState(false);
     const [name, setName] = useState('');
@@ -30,14 +30,10 @@ export default function FyPage() {
     }, [userId]);
 
     const isMyUser = userId === session?.user?.id;
-    const tabs = ["Рецензии", "Для Вас"]
 
     return (
         <Layout>
             <UserContextProvider>
-                <div className="z-10 bg-white md:static w-full top-0 visible xl:hidden 2xl:hidden lg:hidden">
-                    <TopNavigationCard title="Главная" tabs={tabs} tab="fyp"/>
-                </div>
                 <Card noPadding={true}>
                     <div className="relative overflow-hidden rounded-md p-3">
                         {/* <Cover url={profile?.cover} editable={isMyUser} onChange={fetchUser} /> */}
