@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import mainLogo from "../images/logo.svg";
 import Avatar from "./Avatar";
+import HomeTabs from "./HomeTabs";
 
 export default function TopNavigationCard() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function TopNavigationCard() {
 
   return (
     <Card noPadding={true}>
-      <div className="px-4 py-2 flex justify-between md:block">
+      <div className="px-4 py-4 flex justify-between md:block">
         {/* <h2 className="text-gray-400 mb-3 hidden md:block">Navigation</h2> */}
         <img src={mainLogo.src} className="my-auto flex justify-center w-10 h-10 border rounded-full"></img>
         <h1 className="text-xl my-auto text-center">Главная</h1>
@@ -28,9 +29,10 @@ export default function TopNavigationCard() {
           <span className="hidden md:block">Уведомления</span>
         </Link>
       </div>
-      <div className="px-4 py-2 flex justify-between md:block shadow-md justify-around">
-        <h1 className="text-l my-auto text-center">Новости</h1>
-        <h1 className="text-l my-auto text-center">Для Вас</h1>
+      <div className="px-4 py-2 flex md:block border-b-2 justify-center">
+        <HomeTabs/>
+        {/* <h1 className="text-l my-auto text-center">Новости</h1>
+        <h1 className="text-l my-auto text-center">Для Вас</h1> */}
       </div>
     </Card>
   );

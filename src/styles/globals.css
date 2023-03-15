@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 body{
-    background-color: #F5F7FB;
+    /* background-color: #F5F7FB; */
+    background-color: rgb(241 245 249);
     color:#333;
 }
 

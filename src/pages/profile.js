@@ -69,7 +69,7 @@ export default function ProfilePage() {
         <Card noPadding={true}>
           <div className="relative overflow-hidden rounded-md">
             {/* <Cover url={profile?.cover} editable={isMyUser} onChange={fetchUser} /> */}
-            <div className="z-20 mx-auto flex justify-center">
+            <div className="z-20 mx-auto flex justify-center mt-8">
               {profile && (
                 <Avatar url={profile.avatar} size={'lg'} editable={isMyUser} onChange={fetchUser} />
               )}
