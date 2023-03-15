@@ -190,9 +190,9 @@ export default function PostCard({ id, content, created_at, photos, profiles: au
         </div>
       </div>
       <div className="flex flex-col bg-slate-200 rounded-md mt-2 mb-2">
-        <div className="flex flex-row flex-nowrap mt-2 ">
+        <div className="flex flex-row flex-nowrap mt-2">
           <div className="flex flex-col w-1/4 text-center">
-            <div className="bg-slate-400 w-16 h-24 m-2 rounded-md"></div>
+            <div className="bg-slate-400 w-16 h-24 m-2 rounded-md mx-auto"></div>
             <p>Автор</p>
             <p>2022</p>
           </div>

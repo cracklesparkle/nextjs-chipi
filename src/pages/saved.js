@@ -5,6 +5,7 @@ import {useSession, useSupabaseClient} from "@supabase/auth-helpers-react";
 import {UserContextProvider} from "../contexts/UserContext";
 import Card from "../components/Card";
 import TopNavigationCard from "@/components/TopNavigationCard";
+import { motion } from "framer-motion";
 
 export default function SavedPostsPage() {
   const [posts,setPosts] = useState([]);
@@ -40,7 +41,7 @@ export default function SavedPostsPage() {
             <PostCard {...post} />
           </div>
         ))} */}
-        <div>
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
           <Card>
             <div className="grid md:grid-cols-2 gap-4">
               <Card>
@@ -69,7 +70,7 @@ export default function SavedPostsPage() {
               </Card>
             </div>
           </Card>
-        </div>
+        </motion.div>
       </UserContextProvider>
     </Layout>
   );
