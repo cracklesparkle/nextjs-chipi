@@ -14,7 +14,7 @@ export default function LoginPage() {
   }
   return (
     <Layout hideNavigation={true}>
-      <div className="h-screen flex items-center">
+      <div className="h-screen flex items-center bg-white">
         <div className="max-w-xs mx-auto grow -mt-24">
           <svg className="login-logo mx-auto" width="271" height="130" viewBox="0 0 271 130" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M47 36.3457C51.9105 29.4906 57.1795 23.5696 63.8165 19.3534C72.0693 14.1107 80.862 14.024 89.4861 17.7604C101.802 23.0963 111.173 37.2858 124.365 39.8671C137.747 42.4857 153.692 37.2347 162.469 23.5176C165.04 19.4986 168.413 10.6264 162.914 7.92271C157.202 5.1144 151.987 9.11035 148.299 14.6022C141.191 25.1876 138.028 39.0786 135.909 52.3878C134.34 62.2477 133.529 72.74 133.529 82.7951C133.529 92.9627 134.757 103.945 139.09 112.699C146.26 127.186 166.977 124.285 177.128 116.836C183.324 112.288 193.143 100.738 201.151 86.6519C207.557 72.5662 223.573 -5.52023 197.948 14.6022" stroke="#41D0C8" strokeWidth="13" strokeLinecap="round" className="svg-elem-1"></path>
@@ -29,11 +29,11 @@ export default function LoginPage() {
             <div className="rounded-md">
 
               <div className="flex flex-col space-y-1 mb-4">
-                <input type="text" name="username" id="username" className="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Логин" />
+                <input type="text" name="username" id="username" className="bg-slate-100 border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Логин" />
               </div>
 
               <div className="flex flex-col space-y-1 mb-4">
-                <input type="password" name="password" id="password" className="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Пароль" />
+                <input type="password" name="password" id="password" className="bg-slate-100 border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Пароль" />
               </div>
 
 
